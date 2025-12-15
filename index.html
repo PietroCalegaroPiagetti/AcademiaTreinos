@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,9 +16,8 @@
     </nav>
 </header>
 
-
 <section class="hero ficha-hero">
-    <h2>Ficha de Treino</h2>
+    <h2>Ficha de Treino do Aluno</h2>
     <p>Visualização completa da ficha de treino do aluno.</p>
 </section>
 
@@ -36,206 +35,117 @@
     <!-- Divisão dos Treinos -->
     <section class="divisao-treino">
         <h3>Divisão dos Treinos</h3>
-        <p><strong>Tipo:</strong> ABC</p>
-        <p><strong>Dias por semana:</strong> 3</p>
+        <p><strong>Tipo:</strong> ABCD</p>
+        <p><strong>Dias por semana:</strong> 4</p>
     </section>
 
-    <!-- Ficha A -->
-    <section class="treino-box">
+    <!-- Botões -->
+    <section class="selecionar-treino">
+        <h3>Selecione o Treino</h3>
+        <button onclick="mostrarTreino('A')">Treino A</button>
+        <button onclick="mostrarTreino('B')">Treino B</button>
+        <button onclick="mostrarTreino('C')">Treino C</button>
+        <button onclick="mostrarTreino('D')">Treino D</button>
+    </section>
+
+    <!-- Treino A -->
+    <section class="treino-box" id="treinoA" style="display:none;">
         <h3>Treino A — Peito e Tríceps</h3>
         <table>
             <tr>
-                <th>Exercício</th>
-                <th>Séries</th>
-                <th>Repetições</th>
-                <th>Observações</th>
+                <th>Exercício</th><th>Séries</th><th>Repetições</th><th>Observações</th>
             </tr>
-            <tr>
-                <td>Supino Reto</td>
-                <td>4</td>
-                <td>8-12</td>
-                <td>Carga progressiva</td>
-            </tr>
-            <tr>
-                <td>Supino Inclinado</td>
-                <td>3</td>
-                <td>10-12</td>
-                <td>Banco entre 30° e 45°</td>
-            </tr>
-            <tr>
-                <td>Cross Over</td>
-                <td>3</td>
-                <td>12-15</td>
-                <td>Foco na contração</td>
-            </tr>
-            <tr>
-                <td>Tríceps Testa</td>
-                <td>3</td>
-                <td>12</td>
-                <td>Movimento controlado</td>
-            </tr>
-            <tr>
-                <td>Tríceps Francês</td>
-                <td>4</td>
-                <td>10-12</td>
-                <td>Estabilize o corpo</td>
-            </tr>
+            <tr><td>Supino Reto com barra</td><td>4</td><td>8-12</td><td>Trazer a barra até o peito</td></tr>
+            <tr><td>Supino Inclinado</td><td>3</td><td>10-12</td><td>Banco entre 30° e 45°</td></tr>
+            <tr><td>Cross Over</td><td>3</td><td>12-15</td><td>Foco na contração</td></tr>
+            <tr><td>Tríceps Testa</td><td>3</td><td>12</td><td>Movimento controlado</td></tr>
+            <tr><td>Tríceps Francês</td><td>4</td><td>10-12</td><td>Estabilize o corpo</td></tr>
         </table>
     </section>
 
-    <!-- Ficha B -->
-    <section class="treino-box">
+    <!-- Treino B -->
+    <section class="treino-box" id="treinoB" style="display:none;">
         <h3>Treino B — Costas e Bíceps</h3>
         <table>
             <tr>
-                <th>Exercício</th>
-                <th>Séries</th>
-                <th>Repetições</th>
-                <th>Observações</th>
+                <th>Exercício</th><th>Séries</th><th>Repetições</th><th>Observações</th>
             </tr>
-            <tr>
-                <td>Puxada Frontal</td>
-                <td>4</td>
-                <td>10</td>
-                <td>Abrir bem o peito</td>
-            </tr>
-            <tr>
-                <td>Remada Sentada</td>
-                <td>3</td>
-                <td>10-12 
-                <td> Mantenha os ombros p/trás</td>    
-                </t>
-            <tr>
-                <td>
-                    Remada Unilateral
-                </td>
-                <td>4</td>
-                <td>8-10</td>
-                <td>Atente a  postura no banco</td>
-            </tr>
-            <tr>
-                <td>
-                    Rosca Direta c/Halteres
-                </td>
-                <td>3</td>
-                <td>8-10</td>
-                <td>Alonge ao máximo o bíceps</td>
-            </tr>
-            <tr>
-                <td>
-                    Rosca Scott Máquina
-                </td>
-                <td>3</td>
-                <td>10-12</td>
-                <td>Não abaixe demais </td>
-            </tr>
+            <tr><td>Puxada Frontal</td><td>4</td><td>10</td><td>Abrir bem o peito</td></tr>
+            <tr><td>Remada Sentada</td><td>3</td><td>10-12</td><td>Mantenha os ombros para trás</td></tr>
+            <tr><td>Remada Unilateral</td><td>4</td><td>8-10</td><td>Postura correta no banco</td></tr>
+            <tr><td>Rosca Direta c/Halteres</td><td>3</td><td>8-10</td><td>Alongue o bíceps</td></tr>
+            <tr><td>Rosca Scott Máquina</td><td>3</td><td>10-12</td><td>Não abaixar demais</td></tr>
         </table>
     </section>
 
-    <!-- Ficha c -->  
-    <section class="treino-box">
+    <!-- Treino C -->
+    <section class="treino-box" id="treinoC" style="display:none;">
         <h3>Treino C — Ombros e Trapézio</h3>
         <table>
             <tr>
-                <th>Exercício</th>
-                <th>Séries</th>
-                <th>Repetições</th>
-                <th>Observações</th>
+                <th>Exercício</th><th>Séries</th><th>Repetições</th><th>Observações</th>
             </tr>
-            <tr>
-                <td>Desenvolvimento p/ frente</td>
-                <td>3</td>
-                <td>10-12</td>
-                <td>Não encostar os halteres</td>
-            </tr>
-            <tr>
-                <td>Elevação Lateral </td>
-                <td>3</td>
-                <td>10-12 
-                <td> Não ultrapasse a linha dos ombros</td>    
-                </t>
-            <tr>
-                <td>
-                    Elevação Frontal
-                </td>
-                <td>3</td>
-                <td>8-10</td>
-                <td>Curve levemente os braços</td>
-            </tr>
-            <tr>
-                <td>
-                    Remada alta com halteres
-                </td>
-                <td>3</td>
-                <td>8-10</td>
-                <td>Cuidado para não levantar acima do queixo</td>
-            </tr>
-            <tr>
-                <td>
-                    Encolhimento
-                </td>
-                <td>4</td>
-                <td>12</td>
-                <td>Mantenha os halteres na linha dos ombros </td>
-            </tr>
+            <tr><td>Desenvolvimento p/ frente</td><td>3</td><td>10-12</td><td>Não encostar os halteres</td></tr>
+            <tr><td>Elevação Lateral</td><td>3</td><td>10-12</td><td>Não ultrapassar os ombros</td></tr>
+            <tr><td>Elevação Frontal</td><td>3</td><td>8-10</td><td>Braços levemente curvados</td></tr>
+            <tr><td>Remada Alta</td><td>3</td><td>8-10</td><td>Não subir acima do queixo</td></tr>
+            <tr><td>Encolhimento</td><td>4</td><td>12</td><td>Halteres alinhados</td></tr>
         </table>
     </section>
 
-     <!-- Ficha c -->  
-     <section class="treino-box">
+    <!-- Treino D -->
+    <section class="treino-box" id="treinoD" style="display:none;">
         <h3>Treino D — Pernas</h3>
         <table>
             <tr>
-                <th>Exercício</th>
-                <th>Séries</th>
-                <th>Repetições</th>
-                <th>Observações</th>
+                <th>Exercício</th><th>Séries</th><th>Repetições</th><th>Observações</th>
             </tr>
-            <tr>
-                <td>Leg Press</td>
-                <td>3</td>
-                <td>8-10</td>
-                <td>Não estender totalmente a perna</td>
-            </tr>
-            <tr>
-                <td>Hack </td>
-                <td>3</td>
-                <td>10-12 
-                <td> Desça até embaixo</td>    
-                </t>
-            <tr>
-                <td>Extensor</td>
-                <td>3</td>
-                <td>8-10</td>
-                <td>Ajuste a altura do banco corretamente</td>
-            </tr>
-            <tr>
-                <td>Cadeira Flexora </td>
-                <td>3</td>
-                <td>8-10</td>
-                <td>Ajuste a máquina nos seus calcanhares</td>
-            </tr>
-            <tr>
-                <td>Adutor</td>
-                <td>3</td>
-                <td>12</td>
-                <td>Feche as pernas ao máximo </td>
-            </tr>
-            <tr>
-                <td>Abdutor</td>
-                <td>3</td>
-                <td>12</td>
-                <td>Abra as pernas controlando a velocidade do Movimento </td>
-            </tr>
-            <tr>
-                <td>Agachamento</td>
-                <td>3</td>
-                <td>10</td>
-                <td>Atente a postura das costas </td>
-            </tr>
+            <tr><td>Leg Press</td><td>3</td><td>8-10</td><td>Não estender totalmente</td></tr>
+            <tr><td>Hack</td><td>3</td><td>10-12</td><td>Descer bem</td></tr>
+            <tr><td>Extensor</td><td>3</td><td>8-10</td><td>Ajustar banco</td></tr>
+            <tr><td>Cadeira Flexora</td><td>3</td><td>8-10</td><td>Ajustar calcanhares</td></tr>
+            <tr><td>Adutor</td><td>3</td><td>12</td><td>Fechar bem as pernas</td></tr>
+            <tr><td>Abdutor</td><td>3</td><td>12</td><td>Controle do movimento</td></tr>
+            <tr><td>Agachamento</td><td>3</td><td>10</td><td>Postura correta</td></tr>
         </table>
     </section>
-    
+
+</main>
+
+<section class="evolucao">
+    <h2>Sua Evolução</h2>
+
+    <div class="evolucao-grid">
+        <div class="card">
+            <h3>Peso corporal</h3>
+            <p id="peso">75 kg</p>
+            <button onclick="editarValor('peso')">Editar</button>
+        </div>
+
+        <div class="card">
+            <h3>Carga</h3>
+            <p id="carga">Supino 40kg</p>
+            <button onclick="editarValor('carga')">Editar</button>
+        </div>
+
+        <div class="card">
+            <h3>Medidas</h3>
+            <p id="medidas">Braço 36 cm</p>
+            <button onclick="editarValor('medidas')">Editar</button>
+        </div>
+    </div>
+</section>
+
+
+
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
+
+
 
    
     
