@@ -1,27 +1,32 @@
 // ===== MOSTRAR TREINOS =====
 function mostrarTreino(letra) {
-    // Esconde todos os treinos
-    document.getElementById("treinoA").style.display = "none";
-    document.getElementById("treinoB").style.display = "none";
-    document.getElementById("treinoC").style.display = "none";
-    document.getElementById("treinoD").style.display = "none";
+    const treinos = ["treinoA", "treinoB", "treinoC", "treinoD"];
 
-    // Mostra apenas o treino selecionado
-    if (letra === "A") {
-        document.getElementById("treinoA").style.display = "block";
-    } else if (letra === "B") {
-        document.getElementById("treinoB").style.display = "block";
-    } else if (letra === "C") {
-        document.getElementById("treinoC").style.display = "block";
-    } else if (letra === "D") {
-        document.getElementById("treinoD").style.display = "block";
+    // Esconde todos os treinos (só se existirem)
+    treinos.forEach(id => {
+        const treino = document.getElementById(id);
+        if (treino) {
+            treino.style.display = "none";
+        }
+    });
+
+    // Mostra o treino selecionado
+    const treinoSelecionado = document.getElementById("treino" + letra);
+    if (treinoSelecionado) {
+        treinoSelecionado.style.display = "block";
     }
 }
 
 // ===== EDITAR EVOLUÇÃO =====
 function editarValor(id) {
-    let elemento = document.getElementById(id);
-    let novoValor = prompt("Digite o novo valor:");
+    const elemento = document.getElementById(id);
+
+    if (!elemento) {
+        alert("Elemento não encontrado: " + id);
+        return;
+    }
+
+    const novoValor = prompt("Digite o novo valor:");
 
     if (novoValor !== null && novoValor !== "") {
         elemento.innerText = novoValor;
